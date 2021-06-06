@@ -22,6 +22,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject bridge;
     public float time_Sea;
     public float time_Sea_Current;
+    public bool MenuIsOpen;
 
 
     void Start()
@@ -34,7 +35,7 @@ public class PlayerControl : MonoBehaviour
         speed = 5.0f;
         isRun = false;
         isStart = true;
-        isGround = false;
+        isGround = true;
         nub_wood = 0;
         animator = GetComponent<Animator>();
     }
@@ -70,27 +71,35 @@ public class PlayerControl : MonoBehaviour
             {
                 text_cut.text = "";
             }
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (nub_wood > 0)
-                {
-                    nub_wood--;
-                    Instantiate(bridge, transform.position + new Vector3(0, 0, 1.0f), transform.rotation);
-                }
-            }
         }
         else {
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 //isStart = true;
                 //transform.position = pos_ori;
-                text_end.text = "";
-                SceneManager.LoadScene("SampleScene");
+                
+                if(text_end.text == "You Find Love")
+                {
+                    if(SceneManager.GetActiveScene().buildIndex == 3)
+                        {SceneManager.LoadScene(0);}
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                else
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
 
     }
+
+    public void MakeBridge(GameObject bridge)
+    {
+        if (nub_wood > 0)
+        {
+            nub_wood--;
+            Instantiate(bridge, transform.position + new Vector3(0, 0, 1.0f), transform.rotation);
+        }
+    }
+
     public void Movement() {
         isRun = false;
         if (Input.GetKey(KeyCode.W))
@@ -128,7 +137,7 @@ public class PlayerControl : MonoBehaviour
         {
             isStart = false;
             text_end.text = "You Find Love";
-            Debug.Log("Gril!");
+            Debug.Log("Girl!");
         }
 	}
 	private void OnTriggerStay2D(Collider2D collision)
@@ -151,7 +160,7 @@ public class PlayerControl : MonoBehaviour
         if (collision.gameObject.tag == "Tree")
         {
             tree = null;
-            Debug.Log("Tree");
+            Debug.Log("Left Tree");
         }
         if (collision.gameObject.tag == "Ground")
         {

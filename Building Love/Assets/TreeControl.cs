@@ -11,11 +11,6 @@ public class TreeControl : MonoBehaviour
         hp = 500;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void damage(int value) {
         hp -= value;
         if (hp <= 0)

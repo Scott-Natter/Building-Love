@@ -44,3 +44,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sea
+    uniqueID: 3260208395
+    locked: 0
+  - name: Background
+    uniqueID: 2535492891
+    locked: 0
+  - name: Ground
+    uniqueID: 1838479487
+    locked: 0
+  - name: Tree
+    uniqueID: 3972407683
+    locked: 0
+  - name: trees
+    uniqueID: 3184141879
+    locked: 0
+  - name: Player
+    uniqueID: 3056786995
+    locked: 0
