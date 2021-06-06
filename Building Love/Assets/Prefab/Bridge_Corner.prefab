@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7547347678038569867}
   - component: {fileID: 9159312722182349388}
   m_Layer: 0
-  m_Name: Logs_Corner 1
+  m_Name: Bridge_Corner
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,8 +130,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1838479487
-  m_SortingLayer: 3
+  m_SortingLayerID: -1110825417
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb271792bffca09488b440066aaaef8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -50,6 +50,7 @@ public class BuildingUI : MonoBehaviour
 
     public void Clicked()
     {
+        Debug.Log("Clicked");
         if(showing)
         {
             Debug.Log("Showing");
